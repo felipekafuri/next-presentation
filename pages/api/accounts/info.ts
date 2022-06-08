@@ -9,5 +9,6 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ msg: 'Must be loaded with the page' })
+  const accountId = req.query.accountId as string
+  res.status(200).json({ msg: `Very important info about account ${accountId}` })
 }
